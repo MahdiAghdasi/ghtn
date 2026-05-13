@@ -1,5 +1,5 @@
 {
-  "name": "ghtun80",
+  "name": "ghtun",
   "build": {
     "dockerfile": "./Dockerfile",
     "context": "."
@@ -13,17 +13,16 @@
     }
   },
   "postAttachCommand": {
-    "public": "gh codespace ports visibility 8080:public -c $CODESPACE_NAME",
+    "public": "gh codespace ports visibility 80:public -c $CODESPACE_NAME",
     "xray": "sudo /usr/local/bin/xray -c /etc/config.json"
   },
   "portsAttributes": {
-    "8080": {
+    "80": {
       "label": "xray",
-      "protocol": "http",
       "onAutoForward": "silent"
     }
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [80],
   "hostRequirements": {
     "cpus": 2
   }

@@ -11,6 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN chmod +x /app/install.sh && /app/install.sh
 COPY config.json /etc/config.json
 
-RUN echo 'echo -e "\n✅ VLESS LINK:\nvless://550e8400-e29b-41d4-a716-446655440007@94.130.50.12:443?encryption=none&security=tls&type=xhttp&mode=packet-up&sni=${CODESPACE_NAME}-8080.app.github.dev&path=%2F#ghtun80"' >> /etc/bash.bashrc
+RUN echo 'echo -e "\n✅ VLESS LINK:\nvless://766285df-6a3d-4767-910a-364736f9829e@94.130.50.12:443?encryption=none&security=tls&type=xhttp&mode=packet-up&sni=${CODESPACE_NAME}-80.app.github.dev&path=%2F#ghtun"' >> /etc/bash.bashrc
 
 CMD ["/usr/local/bin/xray", "-c", "/etc/config.json"]

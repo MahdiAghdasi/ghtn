@@ -1,21 +1,19 @@
 {
   "inbounds": [
     {
-      "port": 8080,
+      "port": 80, 
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "550e8400-e29b-41d4-a716-446655440007"
+            "id": "766285df-6a3d-4767-910a-364736f9829e", 
           }
-        ],
-        "decryption": "none"
+        ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "xhttpSettings": {
-          "mode": "packet-up",
-          "path": "/"
+        "network": "ws",
+        "wsSettings": {
+          "path": "/echo"
         }
       }
     }
