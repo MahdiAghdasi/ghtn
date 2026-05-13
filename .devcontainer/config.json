@@ -1,19 +1,25 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
-      "port": 80, 
+      "listen": "0.0.0.0",
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "766285df-6a3d-4767-910a-364736f9829e", 
+            "id": "550e8400-e29b-41d4-a716-446655440000"
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
+        "security": "none",
         "wsSettings": {
-          "path": "/echo"
+          "path": "/vless"
         }
       }
     }
